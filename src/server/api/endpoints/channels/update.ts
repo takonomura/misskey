@@ -69,7 +69,7 @@ export default define(meta, async (ps, me) => {
 		throw new ApiError(meta.errors.accessDenied);
 	}
 
-	let banner = undefined;
+	let banner;
 	if (ps.bannerId != null) {
 		banner = await DriveFiles.findOne({
 			id: ps.bannerId,
